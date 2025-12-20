@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SEVENTEEN | Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo-container">
+    <img src="assets/logo.jpg" alt="SEVENTEEN Logo" class="logo-img">
+  </div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="tutorials.html">Tutorials</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="#" onclick="toggleCart()">Cart</a></li>
+  </ul>
+</nav>
+
+
+<section class="hero fade">
+  <h1>Detail Like a Pro, At Home.</h1>
+  <p>Professional DIY Vehicle Detailing Solutions</p>
+</section>
+
+<section class="products fade">
+  <h2>Featured Products</h2>
+
+  <div class="product-grid">
+    <div class="product-card">
+      <h3>Nano Coating</h3>
+      <p>High-gloss nano paint protection.</p>
+      <button onclick="addToCart('Nano Coating')">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <h3>Nano Black</h3>
+      <p>Restore deep black trim & tires.</p>
+      <button onclick="addToCart('Nano Black')">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <h3>Ultimate Scratch Remover</h3>
+      <p>Remove minor scratches.</p>
+      <button onclick="addToCart('Nano Black')">Coming Soon</button>
+    </div>
+  </div>
+</section>
+
+<section class="slider fade">
+  <h2>Before / After</h2>
+  <img id="sliderImage" src="assets/before.jpg" alt="Before After">
+  <button onclick="changeSlide()">Toggle</button>
+</section>
+
+<div id="cartPopup" class="cart-popup">
+  <h3>Your Cart</h3>
+
+  <ul id="cartItems"></ul>
+
+  <!-- CHECKOUT BUTTON -->
+  <button class="checkout-btn" onclick="goToCheckout()">
+    Checkout
+  </button>
+
+  <!-- EXISTING BUTTONS -->
+  <button onclick="clearCart()">Clear</button>
+  <button onclick="toggleCart()">Close</button>
+</div>
+
+
+<footer>
+  <p>© 2025 SEVENTEEN Detailing</p>
+</footer>
+
+</body>
+</html>

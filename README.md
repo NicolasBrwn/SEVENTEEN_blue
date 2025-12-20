@@ -1,1 +1,1 @@
-# SEVENTEEN_blue
+# SEVENTEEN
